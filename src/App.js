@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import './App.css'; // Import the existing CSS file
+import Login from './Login';
+import InventoryManagement from './InventoryManagement';
+import OrderProcessing from './OrderProcessing';
+import ReportingAnalytics from './ReportingAnalytics';
 
-function App() {
+const App = () => {
+  const isLoggedIn = true; // Placeholder for checking user authentication
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {isLoggedIn ? (
+        <>
+          <InventoryManagement />
+          <OrderProcessing />
+          <ReportingAnalytics />
+        </>
+      ) : (
+        <Login />
+      )}
     </div>
   );
-}
+};
 
 export default App;

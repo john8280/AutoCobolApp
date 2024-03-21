@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+/* App.css */
+body {
+  background-color: #62a8e1; /* Sky blue background */
+  font-family: 'Press Start 2P', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  border: 8px solid #d80000; /* Red border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3 {
+  font-size: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.App-link {
-  color: #61dafb;
+table, th, td {
+  border: 2px solid #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #d80000; /* Red background for table header */
+}
+
+button {
+  background-color: #ffcc00; /* Yellow button */
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ffc100; /* Darker yellow on hover */
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 1rem;
+  border: 2px solid #d80000; /* Red border for input fields */
+  border-radius: 5px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #ffcc00; /* Yellow border on focus */
 }
